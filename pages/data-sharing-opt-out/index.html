@@ -2482,10 +2482,10 @@ html.bvpage main ol,html.bvpage main ul{padding-left:22px;margin:0 0 22px}
   "
 >
   <rte-formatter>
-    <link rel="stylesheet" type="text/css" href="https:///a/data-sale-opt-out-b7f5727a0b.css">
+    <link rel="stylesheet" type="text/css" href="/a/data-sale-opt-out-b7f5727a0b.css">
 <meta charset="utf-8"> <p>As described in our Privacy Policy, we collect personal information from your interactions with us and our website, including through cookies and similar technologies. We may also share this personal information with third parties, including advertising partners. We do this in order to show you ads on other websites that are more relevant to your interests and for other reasons outlined in our privacy policy.</p> <p>Sharing of personal information for targeted advertising based on your interaction on different websites may be considered &quot;sales&quot;, &quot;sharing&quot;, or &quot;targeted advertising&quot; under certain U.S. state privacy laws. Depending on where you live, you may have the right to opt out of these activities. If you would like to exercise this opt-out right, please follow the instructions below.</p> <p>If you visit our website with the Global Privacy Control opt-out preference signal enabled, depending on where you are, we will treat this as a request to opt-out of activity that may be considered a “sale” or “sharing” of personal information or other uses that may be considered targeted advertising for the device and browser you used to visit our website.</p>
 <div id="pc--optOutFormContainer" data-not-applicable='To opt out of the &quot;sale&quot; or &quot;sharing&quot; of your personal information collected using cookies and other device-based identifiers as described above, you must be browsing from one of the applicable US states referred to above.' data-description='If you would like to opt out of activity that may be considered a &quot;sale&quot; or &quot;share,&quot; or &quot;targeted advertising&quot;, please submit your email.' data-email-label='Email' data-success='Opted-out successfully' data-error='A problem occurred, try submitting your email again' data-form-description='By clicking “opt out“, the browser on this device will be opted out of sharing personal data. If you select the checkbox and enter an email, the related customer account will also be opted out.' data-form-email-label='Email' data-form-opt-out-account-label="Don&#39;t share data from my account (optional)" data-form-button-text='Opt out' data-form-opted-out='The browser on this device is opted out' data-form-success='You have successfully opted out' data-form-error='A problem occurred, please try again' ></div>
-<script src="https:///a/data-sale-opt-out-795a78627e.js" defer></script> <script src="https://js.hcaptcha.com/1/api.js?onload=optOutOnLoad" defer></script>
+<script src="/a/data-sale-opt-out-795a78627e.js" defer></script> <script src="https://js.hcaptcha.com/1/api.js?onload=optOutOnLoad" defer></script>
   </rte-formatter>
 </div>
 
@@ -2658,12 +2658,12 @@ html.bvpage main ol,html.bvpage main ul{padding-left:22px;margin:0 0 22px}
               >Terms of service</a>
             </li><li>
               <a
-                href="/policies/contact-information"
+                href="/pages/contact"
                 class="footer-utilities__text"
               >Contact information</a>
             </li><li>
               <a
-                href="/policies/legal-notice"
+                href="/policies/terms-of-service"
                 class="footer-utilities__text"
               >Legal notice</a>
             </li><li>
@@ -2859,7 +2859,7 @@ function sc(){var w=document.querySelector('.page-wrapper');if(w&&w.scrollHeight
 var L=document.getElementById('bvvo'),P=document.getElementById('bvvp'),M=document.getElementById('bvvm'),C=document.getElementById('bvvc'),F=document.getElementById('bvvf'),I=document.getElementById('bvvi'),MAIL='bevibomesupport@gmail.com',S='/products/electric-spin-scrubber',B='/products/cordless-heated-lunch-box';
 var KB=[
 [/(lint|roller|pet hair|dog hair|cat hair|fur|hoodie|sofa)/,'The <a href="/products/reusable-lint-pet-hair-roller">Reusable Lint &amp; Pet Hair Roller</a> ($16.99) takes pet hair and lint off clothes, sofas and car seats in one swipe. Reusable: no sticky sheets, no refills.',['Shipping time','Returns']],
-[/(r(ü|u)zgar|uysal|founder|owner|who (made|runs|started)|ceo|kurucu)/,'BeVibome was founded in 2026 by <a href="https://ruzgaruysal.netlify.app/" target="_blank">Rüzgar Uysal</a>, an entrepreneur from Istanbul and the founder and CEO of BeVibome. He is part of the DEÜ – University at Albany (SUNY) program and will graduate in New York.',['Which product is for me?']],
+[/(r(ü|u)zgar|uysal|founder|owner|who (made|runs|started)|ceo|kurucu)/,'BeVibome was founded in 2026 by <a href="/pages/ruzgar-uysal" target="_blank">Rüzgar Uysal</a>, an entrepreneur from Istanbul and the founder and CEO of BeVibome. He is part of the DEÜ – University at Albany (SUNY) program and will graduate in New York.',['Which product is for me?']],
 [/(game|play|grout rush|shed happens|microwave line)/,'We have three quick games: Grout Rush, Shed Happens and Microwave Line. <a href="/#games">Play them here</a>.',[]],
 [/(11\.11|11 11|black friday|drop)/,'The 11.11 Drop: 15% off everything from Nov 11 to Nov 13 (US Eastern), applied at checkout. Every other day, buy 2 of the same product and save 15%.',['Which product is for me?']],
 [/(which|recommend|help me choose|for me|suggest|best)/,'Tell me what you want to fix:',['Cleaning bathroom & tiles','Hot lunch at work/school','Pet hair on clothes']],
@@ -2882,7 +2882,7 @@ var HIST=[];function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,
 function local(q){var t=q.toLowerCase(),hit=null;for(var i=0;i<KB.length;i++){if(KB[i][0].test(t)){hit=KB[i];break}}if(hit){say(hit[1]);chips(hit[2])}else{say('I am not sure about that one. Our team replies within 24 hours: <a href="mailto:'+MAIL+'?subject='+encodeURIComponent('Question: '+q)+'">'+MAIL+'</a>');chips()}}
 function ask(q){say(q,1);HIST.push({role:'user',text:q});say('<span class="bvvo-dots">Vibo is typing…</span>');var tp=P.querySelectorAll('.bvvo-dots');tp=tp[tp.length-1];var box=tp&&tp.parentNode;
 var done=0,to=setTimeout(function(){if(done)return;done=1;box&&box.remove();local(q)},22000);
-fetch('https://ruzgaruysal.netlify.app/.netlify/functions/vibo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:HIST.slice(-8)})}).then(function(r){return r.json()}).then(function(j){if(done)return;done=1;clearTimeout(to);box&&box.remove();if(j&&j.text){HIST.push({role:'assistant',text:j.text});say(esc(j.text).replace(/\*\*(.+?)\*\*/g,'$1').replace(/\n/g,'<br>').replace(/bevibomesupport@gmail\.com/g,'<a href="mailto:'+MAIL+'">'+MAIL+'</a>'))}else local(q)}).catch(function(){if(done)return;done=1;clearTimeout(to);box&&box.remove();local(q)})}
+fetch('/pages/ruzgar-uysal.netlify/functions/vibo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:HIST.slice(-8)})}).then(function(r){return r.json()}).then(function(j){if(done)return;done=1;clearTimeout(to);box&&box.remove();if(j&&j.text){HIST.push({role:'assistant',text:j.text});say(esc(j.text).replace(/\*\*(.+?)\*\*/g,'$1').replace(/\n/g,'<br>').replace(/bevibomesupport@gmail\.com/g,'<a href="mailto:'+MAIL+'">'+MAIL+'</a>'))}else local(q)}).catch(function(){if(done)return;done=1;clearTimeout(to);box&&box.remove();local(q)})}
 var opened=0;function tog(o){P.hidden=!o;L.setAttribute('aria-expanded',o?'true':'false');if(o&&!opened){opened=1;say('Hi, I am Vibo, BeVibome&#39;s assistant. How can I help?');chips()}if(o)setTimeout(function(){I.focus()},50)}
 if(L){L.onclick=function(){tog(P.hidden)};P.querySelector('.bvvp-x').onclick=function(){tog(false)};F.onsubmit=function(ev){ev.preventDefault();var q=I.value.trim();if(!q)return;I.value='';ask(q)};document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!P.hidden)tog(false)})}
 /* hero clouds */

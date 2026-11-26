@@ -2668,12 +2668,12 @@ BVG(g)})();
               >Terms of service</a>
             </li><li>
               <a
-                href="/policies/contact-information"
+                href="/pages/contact"
                 class="footer-utilities__text"
               >Contact information</a>
             </li><li>
               <a
-                href="/policies/legal-notice"
+                href="/policies/terms-of-service"
                 class="footer-utilities__text"
               >Legal notice</a>
             </li><li>
@@ -2869,7 +2869,7 @@ function sc(){var w=document.querySelector('.page-wrapper');if(w&&w.scrollHeight
 var L=document.getElementById('bvvo'),P=document.getElementById('bvvp'),M=document.getElementById('bvvm'),C=document.getElementById('bvvc'),F=document.getElementById('bvvf'),I=document.getElementById('bvvi'),MAIL='bevibomesupport@gmail.com',S='/products/electric-spin-scrubber',B='/products/cordless-heated-lunch-box';
 var KB=[
 [/(lint|roller|pet hair|dog hair|cat hair|fur|hoodie|sofa)/,'The <a href="/products/reusable-lint-pet-hair-roller">Reusable Lint &amp; Pet Hair Roller</a> ($16.99) takes pet hair and lint off clothes, sofas and car seats in one swipe. Reusable: no sticky sheets, no refills.',['Shipping time','Returns']],
-[/(r(ü|u)zgar|uysal|founder|owner|who (made|runs|started)|ceo|kurucu)/,'BeVibome was founded in 2026 by <a href="https://ruzgaruysal.netlify.app/" target="_blank">Rüzgar Uysal</a>, an entrepreneur from Istanbul and the founder and CEO of BeVibome. He is part of the DEÜ – University at Albany (SUNY) program and will graduate in New York.',['Which product is for me?']],
+[/(r(ü|u)zgar|uysal|founder|owner|who (made|runs|started)|ceo|kurucu)/,'BeVibome was founded in 2026 by <a href="/pages/ruzgar-uysal" target="_blank">Rüzgar Uysal</a>, an entrepreneur from Istanbul and the founder and CEO of BeVibome. He is part of the DEÜ – University at Albany (SUNY) program and will graduate in New York.',['Which product is for me?']],
 [/(game|play|grout rush|shed happens|microwave line)/,'We have three quick games: Grout Rush, Shed Happens and Microwave Line. <a href="/#games">Play them here</a>.',[]],
 [/(11\.11|11 11|black friday|drop)/,'The 11.11 Drop: 15% off everything from Nov 11 to Nov 13 (US Eastern), applied at checkout. Every other day, buy 2 of the same product and save 15%.',['Which product is for me?']],
 [/(which|recommend|help me choose|for me|suggest|best)/,'Tell me what you want to fix:',['Cleaning bathroom & tiles','Hot lunch at work/school','Pet hair on clothes']],
@@ -2892,7 +2892,7 @@ var HIST=[];function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,
 function local(q){var t=q.toLowerCase(),hit=null;for(var i=0;i<KB.length;i++){if(KB[i][0].test(t)){hit=KB[i];break}}if(hit){say(hit[1]);chips(hit[2])}else{say('I am not sure about that one. Our team replies within 24 hours: <a href="mailto:'+MAIL+'?subject='+encodeURIComponent('Question: '+q)+'">'+MAIL+'</a>');chips()}}
 function ask(q){say(q,1);HIST.push({role:'user',text:q});say('<span class="bvvo-dots">Vibo is typing…</span>');var tp=P.querySelectorAll('.bvvo-dots');tp=tp[tp.length-1];var box=tp&&tp.parentNode;
 var done=0,to=setTimeout(function(){if(done)return;done=1;box&&box.remove();local(q)},22000);
-fetch('https://ruzgaruysal.netlify.app/.netlify/functions/vibo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:HIST.slice(-8)})}).then(function(r){return r.json()}).then(function(j){if(done)return;done=1;clearTimeout(to);box&&box.remove();if(j&&j.text){HIST.push({role:'assistant',text:j.text});say(esc(j.text).replace(/\*\*(.+?)\*\*/g,'$1').replace(/\n/g,'<br>').replace(/bevibomesupport@gmail\.com/g,'<a href="mailto:'+MAIL+'">'+MAIL+'</a>'))}else local(q)}).catch(function(){if(done)return;done=1;clearTimeout(to);box&&box.remove();local(q)})}
+fetch('/pages/ruzgar-uysal.netlify/functions/vibo',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:HIST.slice(-8)})}).then(function(r){return r.json()}).then(function(j){if(done)return;done=1;clearTimeout(to);box&&box.remove();if(j&&j.text){HIST.push({role:'assistant',text:j.text});say(esc(j.text).replace(/\*\*(.+?)\*\*/g,'$1').replace(/\n/g,'<br>').replace(/bevibomesupport@gmail\.com/g,'<a href="mailto:'+MAIL+'">'+MAIL+'</a>'))}else local(q)}).catch(function(){if(done)return;done=1;clearTimeout(to);box&&box.remove();local(q)})}
 var opened=0;function tog(o){P.hidden=!o;L.setAttribute('aria-expanded',o?'true':'false');if(o&&!opened){opened=1;say('Hi, I am Vibo, BeVibome&#39;s assistant. How can I help?');chips()}if(o)setTimeout(function(){I.focus()},50)}
 if(L){L.onclick=function(){tog(P.hidden)};P.querySelector('.bvvp-x').onclick=function(){tog(false)};F.onsubmit=function(ev){ev.preventDefault();var q=I.value.trim();if(!q)return;I.value='';ask(q)};document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&!P.hidden)tog(false)})}
 /* hero clouds */
