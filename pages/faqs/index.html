@@ -3932,11 +3932,10 @@ document.addEventListener('submit',function(e){var f=e.target,a=f.getAttribute('
 if(/\/contact/.test(a)){e.preventDefault();e.stopImmediatePropagation();var em=f.querySelector('[type=email],[name*=email]'),msg=f.querySelector('textarea'),nm=f.querySelector('[name*=name]');if(msg){mail('Question for BeVibome',(nm&&nm.value?'Name: '+nm.value+'\n':'')+(em&&em.value?'Email: '+em.value+'\n\n':'')+msg.value)}else{mail('Subscribe me to BeVibome','Please add '+(em&&em.value||'my email')+' to the BeVibome list for new deals and drops.')}}},true);
 document.addEventListener('click',function(e){var a=e.target.closest('a[href*="/account"],a[href*="shopify.com/"]');if(a&&/account/.test(a.href)){e.preventDefault();var M=document.getElementById('bvnm');if(M){M.querySelector('h3').textContent='Accounts open with checkout';M.querySelector('p').textContent='Customer accounts open together with checkout, very soon. Your favorites are already saved on this device.';M.querySelector('#bvna').style.display='none';M.classList.add('on')}}},true);
 var _f=window.fetch;window.fetch=function(u){var s=String(u&&u.url||u);if(/\/search\/suggest/.test(s))return Promise.resolve(new Response('<div></div>',{headers:{'Content-Type':'text/html'}}));return _f.apply(this,arguments)};
-var t=document.querySelector('.bvtrk')||(location.pathname.indexOf('/pages/track-order')===0&&document.querySelector('main .rte'));if(location.pathname.indexOf('/pages/track-order')===0&&t){var d=document.createElement('form');d.className='bvtk';d.innerHTML='<label for="bvtn">Have a tracking number?</label><div><input id="bvtn" required placeholder="e.g. 9400 1000 0000 0000 0000 00" autocomplete="off"><button type="submit">TRACK</button></div>';d.onsubmit=function(ev){ev.preventDefault();var v=document.getElementById('bvtn').value.replace(/\s+/g,'');if(v)window.open('https://t.17track.net/en#nums='+encodeURIComponent(v),'_blank','noopener')};t.parentNode.insertBefore(d,t.nextSibling)}})();</script>
+var t=document.querySelector('.bvtrk')||(location.pathname.indexOf('/pages/track-order')===0&&document.querySelector('main .rte'));if(false&&t){var d=document.createElement('form');d.className='bvtk';d.innerHTML='<label for="bvtn">Have a tracking number?</label><div><input id="bvtn" required placeholder="e.g. 9400 1000 0000 0000 0000 00" autocomplete="off"><button type="submit">TRACK</button></div>';d.onsubmit=function(ev){ev.preventDefault();var v=document.getElementById('bvtn').value.replace(/\s+/g,'');if(v)window.open('https://t.17track.net/en#nums='+encodeURIComponent(v),'_blank','noopener')};t.parentNode.insertBefore(d,t.nextSibling)}})();</script>
 <style>.bvtk{max-width:520px;margin:28px auto;text-align:center;font-family:Inter,Arial,sans-serif}.bvtk label{display:block;font-weight:800;margin-bottom:10px;color:#bcd6ff}.bvtk div{display:flex;gap:8px}.bvtk input{flex:1;min-width:0;padding:14px 16px;border:2px solid #bcd6ff;border-radius:99px;background:#0f2148;color:#fff;font:600 15px Inter,Arial}.bvtk button{padding:14px 20px;border:0;border-radius:99px;background:#ff8a65;color:#0b1f3a;font:800 13px Inter,Arial;letter-spacing:.02em;cursor:pointer}</style><style id="bvfix2011">
 .bvpt.nf .sm,.bvpt.nf .vi,.bvpt.nf .vl,.bvpt.lv .sm,.bvpt.lv .vi,.bvpt.lv .vl{display:none!important}
 .bvpt.nf.on .st{animation-duration:1.6s!important}
-@media(max-width:760px){.bw>*:not(.bvv){position:relative;z-index:7}}
 .menu-drawer{width:50vw!important;max-width:50vw!important;min-width:260px}
 .header-logo__image{transform:scale(1.15);transform-origin:left center}.header-logo{margin-right:22px!important}
 @media(max-width:749px){.header-logo__image{width:94px!important;max-width:94px!important;transform:none}.header-logo{margin-right:6px!important}}
@@ -3948,5 +3947,26 @@ function sc(){var w=document.querySelector('.page-wrapper');if(w&&w.scrollHeight
 function bot(){var p=document.querySelector('.bvpm');if(!p)return;var e=sc(),r=p.getBoundingClientRect(),end=e.scrollTop+e.clientHeight>=e.scrollHeight-60||r.bottom<=innerHeight-20;p.classList.toggle('in',end)}
 document.addEventListener('scroll',bot,{capture:true,passive:true});addEventListener('resize',bot);setTimeout(bot,500);
 function acc(){var h=document.querySelector('header');if(!h)return;h.querySelectorAll('svg[data-bvh]').forEach(function(v){if(v.closest('a,button,summary,details')||v.dataset.bvacc)return;v.dataset.bvacc=1;var t=v.parentElement;t.style.cursor='pointer';t.setAttribute('role','link');t.setAttribute('aria-label','Track my order');t.addEventListener('click',function(){location.href='/pages/track-order'})})}
-if(document.readyState!=='loading')acc();else document.addEventListener('DOMContentLoaded',acc);setTimeout(acc,1200);setTimeout(acc,3000)})();</script></body>
+if(document.readyState!=='loading')acc();else document.addEventListener('DOMContentLoaded',acc);setTimeout(acc,1200);setTimeout(acc,3000)})();</script><style id="bvfix2611">
+.bvtrk .rd{height:118px!important}.bvtrk .rd .sky{position:absolute;left:0;bottom:24px;width:100%;height:80px;animation:none}
+.bvtrk .rd:after{top:auto!important;bottom:21px!important}
+.bvtrk .rd>svg:not(.sky){top:auto!important;bottom:24px!important;z-index:2}
+.bvtrk li b{margin-bottom:14px!important}
+.bvtrk ol{margin-top:30px!important}
+html.bvpage .bvpb h1:after{content:"";display:block;width:56px;height:4px;border-radius:4px;background:#ff8a65;margin:16px auto 0}
+html.bvpage .bvpb .k{color:#ff8a65!important}
+html.bvpage main .rte a{color:#ff8a65!important;text-decoration-color:#ff8a65!important}
+html.bvpage main .rte li::marker,html.bvpage main .rte h3:before{color:#ff8a65}
+html.bvpage main .rte h3{border-top:1px solid #23396e}
+.bvnote{max-width:680px;margin:34px auto 0;padding:0 24px;text-align:center;font:500 13px/1.6 Inter,Arial,sans-serif;color:#8fa6d6}
+@media(max-width:760px){.bxi[aria-label='Electric Spin Scrubber'] .bxi-im{top:auto!important;bottom:11vh!important;height:16vh!important;width:29vw!important}.bxi[aria-label='Electric Spin Scrubber'] .bxi-t{max-width:62vw!important;right:auto!important}}html.bvpage main p.bvnote,main p.bvnote{font-size:13px!important;line-height:1.6!important;color:#8fa6d6!important}
+.bvr{opacity:0;transition:opacity .9s ease,transform .9s cubic-bezier(.2,.8,.2,1)}
+.bvr.u{transform:translateY(40px)}.bvr.l{transform:translateX(-60px)}.bvr.r{transform:translateX(60px)}.bvr.s{transform:scale(.86)}
+.bvr.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.bvr{opacity:1;transform:none;transition:none}}
+</style>
+<script>(function(){if(matchMedia('(prefers-reduced-motion: reduce)').matches||!('IntersectionObserver'in window))return;
+function go(){var els=document.querySelectorAll('main h2,main h3,main .rte p,main .rte li,.bvpm h2,.bw-g h2,.bw-so h3,.bvpb p');var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px'});var D=['u','l','r','s'],k=0;
+els.forEach(function(el){if(el.closest('.bvo,.bxi,header,.bvtrk,.menu-drawer,.bvq'))return;var r=el.getBoundingClientRect();if(r.top<innerHeight*.9)return;var d=/H2|H3/.test(el.tagName)?D[k++%4]:'u';el.classList.add('bvr',d);io.observe(el)})}
+if(document.readyState!=='loading')setTimeout(go,300);else document.addEventListener('DOMContentLoaded',function(){setTimeout(go,300)})})();</script></body>
 </html>
