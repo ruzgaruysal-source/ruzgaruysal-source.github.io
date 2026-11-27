@@ -1,6 +1,6 @@
 # Rules for any AI working on this repo (Claude, Copilot, Cursor, ChatGPT, Gemini)
 
-Owner: Rüzgar Uysal (Founder & CEO, BeVibome). Site: https://ruzgaruysal-source.github.io
+Owner: Rüzgar Uysal (Founder & CEO, BeVibome). Site: https://bevibome.com
 
 ## What this is
 - Static site on GitHub Pages. No build step. Push to `main` = live in ~1 min.
